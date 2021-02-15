@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Media Recorder</title>
+
+	<style>
+		html {
+			overflow: hidden;
+		}
+		body {
+			font-family: 'Montserrat';
+			margin: 0;
+		}
+		#main {
+			display: flex;
+			justify-content: center;
+			padding-top: 25px;
+		}
+		#main .wrapper {
+			border-radius: 12px;
+			box-shadow: 0px 3px 4px #42424240;
+			margin-top: 50px;
+			padding: 60px;
+		}
+		#main h1 {
+			font-size: 58px;
+			margin: 0;
+			text-align: center;
+		}
+		#main section {
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-top: 80px;
+		}
+		.controls {
+			gap: 1em;
+		}
+		.controls button {
+			border: none;
+			border-radius: 28px;
+			font-family: inherit;
+			cursor: pointer;
+			padding: 15px 35px;
+		}
+		.controls button:hover {
+			opacity: .8;
+		}
+		.controls button:focus {
+			outline: none;
+		}
+		.controls .button-icon {
+			margin-bottom: 2px;
+			vertical-align: middle;
+			width: 15px;
+		}
+		#simple-alert {
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0px 3px 4px #42424240;
+			display: none;
+			padding: 1em;
+			position: absolute;
+			bottom: -68px;
+			right: 40px;
+			animation: alert 0.5s forwards;
+		}
+		@keyframes alert {
+			from {
+				transform: translateY(0px);
+			}
+			to {
+				transform: translateY(-110px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="main">
+		<div class="wrapper">
+			<h1>Media Recorder</h1>
+			<section>
+				<p><em>Click 'Start' to begin recording your screen.</em></p>
+				<div class="controls">
+					<button id="start-button" onclick="recordScreen()" style="background: lightseagreen">
+						<span>
+							<img src="./assets/play.png" class="button-icon">
+						</span>
+						Start
+					</button>
+					<button onclick="stopRecording()" style="background: darkorange">
+						<span>
+							<img src="./assets/octagon.png" class="button-icon">
+						</span>
+						Stop
+					</button>
+					<button style="background: gold">
+						<span>
+							<img src="./assets/headphones.png" class="button-icon">
+						</span>
+						Audio
+					</button>
+					<button style="background: cornflowerblue">
+						<span>
+							<img src="./assets/video.png" class="button-icon">
+						</span>
+						Video
+					</button>
+					<span style="text-align: center;">
+						<a href="#" id="download" style="display: none; margin-top: 30px">
+							<button>
+								<span>
+									<img src="./assets/download.png" class="button-icon">
+								</span>
+								Download
+							</button>
+						</a>
+					</span>
+				</div>
+			</section>
+		</div>
+
+		<div id="simple-alert">
+			<img src="./assets/check-icon.png" style="width: 40px;" />
+			<span id="alert-text" style="font-size: 16px"></span>
+		</div>
+	</div>
+
+<script>
+	// document.addEventListener("DOMContentLoaded", () => {
+	// 	alert('Click OK to continue');
+	// });
+
+	const stopRecording = () => shouldStop = true;
+</script>
+<script src="./scripts.js"></script>
+</body>
+</html>

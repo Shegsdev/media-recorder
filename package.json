@@ -1,0 +1,27 @@
+{
+  "name": "media-recorder",
+  "version": "1.0.0",
+  "description": "A web based media recorder",
+  "main": "main.js",
+  "scripts": {
+    "start": "node script"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shegsdev/media-recorder.git"
+  },
+  "keywords": [
+    "audio recorder",
+    "video recorder",
+    "screen recorder",
+    "recorder",
+    "mediastream",
+    "media recorder"
+  ],
+  "author": "Segun Akanbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shegsdev/media-recorder/issues"
+  },
+  "homepage": "https://github.com/Shegsdev/media-recorder#readme"
+}
